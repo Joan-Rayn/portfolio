@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Portfolio de Joan Rayn Domtchuen Foubi</title>
+</head>
+<body>
+    <header>
+        <nav class="nav">
+            <div class="logo"><h1>Joan Rayn</h1></div>
+            <ul class="navlist">
+                <li class="navtool"><a href="#accueil">Accueil</a></li>
+                <li class="navtool"><a href="#profil">Profil</a></li>
+                <li class="navtool"><a href="#experiences">Expériences</a></li>
+                <li class="navtool"><a href="#formation">Formation</a></li>
+                <li class="navtool"><a href="#competences">Compétences</a></li>
+                <li class="navtool"><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="menu-toggle" id="menu-toggle">☰</div>
+        </nav>
+    </header>
+
+    <section id="accueil" class="hero">
+        <div class="hero-content">
+            <img src="image_profile.jpg" alt="Photo de profil de Joan Rayn" class="profile-img">
+            <div class="hero-text">
+                <h2 class="editable" id="hero-title">Bonjour, je suis Joan Rayn Domtchuen Foubi</h2>
+                <p class="editable" id="hero-subtitle">Développeur Web & IA | Étudiant Ingénieur Informatique</p>
+                <a href="#profil" class="btn">En savoir plus</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="profil" class="about">
+        <h2>Profil Professionnel</h2>
+        <p class="editable" id="about-text">Étudiant en dernière année d'ingénierie informatique, spécialisé en développement web, systèmes et intelligence artificielle. Expérience dans la conception d'applications modernes (Next.js, FastAPI, Django) et la mise en place d'infrastructures sécurisées (VPN, PAM). Actuellement orienté vers les systèmes d'agents IA et l'intégration de modèles LLM pour l'automatisation des processus.</p>
+    </section>
+
+    <section id="experiences" class="experiences">
+        <h2>Expériences Professionnelles</h2>
+        <div class="experience-item">
+            <h3 class="editable" id="exp1-title">Développeur Python (IA) - Stage</h3>
+            <p class="editable" id="exp1-company"><strong>Myle Cameroun</strong> | 04/2026 – Aujourd'hui</p>
+            <ul>
+                <li class="editable" id="exp1-desc1">Mise en place d'une direction informatique automatisée basée sur des agents IA.</li>
+                <li class="editable" id="exp1-desc2">Implémentation d'équipes d'agents avec CrewAI et Ollama.</li>
+                <li class="editable" id="exp1-desc3">Installation et configuration de OpenWebUI comme interface de gestion des prompts.</li>
+            </ul>
+        </div>
+        <div class="experience-item">
+            <h3 class="editable" id="exp2-title">Développeur Web - Stage</h3>
+            <p class="editable" id="exp2-company"><strong>Myle Cameroun</strong> | 03/2026 – 04/2026</p>
+            <ul>
+                <li class="editable" id="exp2-desc1">Développement d'une plateforme de recherche immobilière (Next.js, NestJS)</li>
+                <li class="editable" id="exp2-desc2">Création d'un site web pour un institut hôtelier en PHP</li>
+            </ul>
+        </div>
+        <div class="experience-item">
+            <h3 class="editable" id="exp3-title">Administrateur Réseau / Système - Stage</h3>
+            <p class="editable" id="exp3-company"><strong>Myle Cameroun</strong> | 02/2026 – 03/2026</p>
+            <ul>
+                <li class="editable" id="exp3-desc1">Configuration d'un serveur VPN sécurisé avec OpenVPN.</li>
+                <li class="editable" id="exp3-desc2">Mise en place d'un système PAM avec Teleport</li>
+                <li class="editable" id="exp3-desc3">Gestion des accès et sécurisation des connexions</li>
+            </ul>
+        </div>
+        <div class="experience-item">
+            <h3 class="editable" id="exp4-title">Développeur Web / IA - Stage</h3>
+            <p class="editable" id="exp4-company"><strong>Stage à distance</strong> | 06/2025 – 09/2025</p>
+            <ul>
+                <li class="editable" id="exp4-desc1">Développement d'un système d'authentification avec FastAPI.</li>
+                <li class="editable" id="exp4-desc2">Implémentation d'un système de reconnaissance des émotions faciales (OpenCV, Py-Feat)</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="formation" class="education">
+        <h2>Formation</h2>
+        <div class="education-item">
+            <h3 class="editable" id="edu1-title">Ingénieur Informatique (Niveau 5)</h3>
+            <p class="editable" id="edu1-school">École Nationale Supérieure Polytechnique de Douala | 2025 – 2026</p>
+        </div>
+        <div class="education-item">
+            <h3 class="editable" id="edu2-title">Baccalauréat D</h3>
+            <p class="editable" id="edu2-school">Lycée Bilingue du Génie Militaire | 2020 – 2021</p>
+        </div>
+    </section>
+
+    <section id="competences" class="skills">
+        <h2>Compétences Techniques</h2>
+        <div class="skills-list">
+            <div class="skill-category">
+                <h3>Développement</h3>
+                <p class="editable" id="skill-dev">Python (Django, FastAPI), Javascript (Node.js, NestJS, Next.js), PHP</p>
+            </div>
+            <div class="skill-category">
+                <h3>IA</h3>
+                <p class="editable" id="skill-ai">OpenCV, MediaPipe, Py-Feat, Ollama, CrewAI, OpenAI Whisper, traitement d'image et reconnaissance d'émotion faciale</p>
+            </div>
+            <div class="skill-category">
+                <h3>Système et Réseau</h3>
+                <p class="editable" id="skill-sys">Ubuntu Server, Debian, OpenVPN, Teleport, gestion des accès et sécurité</p>
+            </div>
+            <div class="skill-category">
+                <h3>Bases de Données</h3>
+                <p class="editable" id="skill-db">PostgreSQL, MySQL, MariaDB, SQLite, YugabyteDB</p>
+            </div>
+        </div>
+        <h2>Langues</h2>
+        <ul>
+            <li class="editable" id="lang-fr">Français : Courant</li>
+            <li class="editable" id="lang-en">Anglais : Intermédiaire</li>
+        </ul>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact</h2>
+        <p class="editable" id="contact-email">Email: joanrayn123@gmail.com</p>
+        <p class="editable" id="contact-phone">Téléphone: +237 692 43 45 47</p>
+        <p class="editable" id="contact-location">Localisation: Douala, Cameroun</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Joan Rayn Domtchuen Foubi. Tous droits réservés.</p>
+    </footer>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

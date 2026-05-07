@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Gestion du Portfolio</title>
+    <link rel="stylesheet" href="admin_style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📊 Gestion du Portfolio</h1>
+            <div class="header-actions">
+                <a href="index.html" class="btn btn-secondary">Voir Portfolio</a>
+            </div>
+        </header>
+
+        <div id="message" class="message"></div>
+
+        <div class="import-export">
+            <button class="btn btn-secondary" onclick="exportAllData()">💾 Exporter toutes les données</button>
+            <button class="btn btn-secondary" onclick="document.getElementById('importFile').click()">📂 Importer données</button>
+            <input type="file" id="importFile" accept=".json" onchange="importData(event)">
+        </div>
+
+        <div class="tabs">
+            <button class="tab-btn active" onclick="switchTab('experiences')">Expériences</button>
+            <button class="tab-btn" onclick="switchTab('formations')">Formations</button>
+            <button class="tab-btn" onclick="switchTab('competences')">Compétences</button>
+            <button class="tab-btn" onclick="switchTab('certifications')">Certifications</button>
+            <button class="tab-btn" onclick="switchTab('projets')">Projets</button>
+            <button class="tab-btn" onclick="switchTab('langues')">Langues</button>
+        </div>
+
+        <!-- EXPÉRIENCES -->
+        <div id="experiences" class="tab-content active">
+            <h2>Gestion des Expériences</h2>
+            <div class="form-section">
+                <h3>Ajouter une expérience</h3>
+                <div class="form-group">
+                    <label for="exp-title">Titre du poste</label>
+                    <input type="text" id="exp-title" placeholder="ex: Développeur Full Stack">
+                </div>
+                <div class="form-group">
+                    <label for="exp-company">Entreprise</label>
+                    <input type="text" id="exp-company" placeholder="ex: Tech Startup">
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="exp-start">Date de début</label>
+                        <input type="text" id="exp-start" placeholder="ex: 01/2024">
+                    </div>
+                    <div class="form-group">
+                        <label for="exp-end">Date de fin</label>
+                        <input type="text" id="exp-end" placeholder="ex: 12/2024">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="exp-desc">Description (une par ligne)</label>
+                    <textarea id="exp-desc" placeholder="Ligne 1&#10;Ligne 2&#10;Ligne 3"></textarea>
+                </div>
+                <button class="btn btn-success" onclick="addExperience()">+ Ajouter</button>
+            </div>
+            <div class="items-list" id="experiences-list"></div>
+        </div>
+
+        <!-- FORMATIONS -->
+        <div id="formations" class="tab-content">
+            <h2>Gestion des Formations</h2>
+            <div class="form-section">
+                <h3>Ajouter une formation</h3>
+                <div class="form-group">
+                    <label for="edu-title">Titre de la formation</label>
+                    <input type="text" id="edu-title" placeholder="ex: Master Informatique">
+                </div>
+                <div class="form-group">
+                    <label for="edu-school">École/Université</label>
+                    <input type="text" id="edu-school" placeholder="ex: Université X">
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="edu-start">Année de début</label>
+                        <input type="text" id="edu-start" placeholder="2020">
+                    </div>
+                    <div class="form-group">
+                        <label for="edu-end">Année de fin</label>
+                        <input type="text" id="edu-end" placeholder="2022">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="edu-details">Détails supplémentaires</label>
+                    <textarea id="edu-details" placeholder="Mention, spécialisations, etc."></textarea>
+                </div>
+                <button class="btn btn-success" onclick="addFormation()">+ Ajouter</button>
+            </div>
+            <div class="items-list" id="formations-list"></div>
+        </div>
+
+        <!-- COMPÉTENCES -->
+        <div id="competences" class="tab-content">
+            <h2>Gestion des Compétences</h2>
+            <div class="form-section">
+                <h3>Ajouter une compétence</h3>
+                <div class="form-group">
+                    <label for="skill-category">Catégorie</label>
+                    <input type="text" id="skill-category" placeholder="ex: Développement">
+                </div>
+                <div class="form-group">
+                    <label for="skill-list">Compétences (séparées par des virgules)</label>
+                    <textarea id="skill-list" placeholder="Python, Django, FastAPI"></textarea>
+                </div>
+                <button class="btn btn-success" onclick="addSkill()">+ Ajouter</button>
+            </div>
+            <div class="items-list" id="competences-list"></div>
+        </div>
+
+        <!-- CERTIFICATIONS -->
+        <div id="certifications" class="tab-content">
+            <h2>Gestion des Certifications</h2>
+            <div class="form-section">
+                <h3>Ajouter une certification</h3>
+                <div class="form-group">
+                    <label for="cert-title">Titre de la certification</label>
+                    <input type="text" id="cert-title" placeholder="ex: AWS Solutions Architect">
+                </div>
+                <div class="form-group">
+                    <label for="cert-issuer">Organisme</label>
+                    <input type="text" id="cert-issuer" placeholder="ex: Amazon Web Services">
+                </div>
+                <div class="form-group">
+                    <label for="cert-date">Date d'obtention</label>
+                    <input type="text" id="cert-date" placeholder="ex: 03/2024">
+                </div>
+                <div class="form-group">
+                    <label for="cert-details">Détails</label>
+                    <textarea id="cert-details" placeholder="ID, URL, etc."></textarea>
+                </div>
+                <button class="btn btn-success" onclick="addCertification()">+ Ajouter</button>
+            </div>
+            <div class="items-list" id="certifications-list"></div>
+        </div>
+
+        <!-- PROJETS -->
+        <div id="projets" class="tab-content">
+            <h2>Gestion des Projets</h2>
+            <div class="form-section">
+                <h3>Ajouter un projet</h3>
+                <div class="form-group">
+                    <label for="proj-title">Titre du projet</label>
+                    <input type="text" id="proj-title" placeholder="ex: Plateforme E-commerce">
+                </div>
+                <div class="form-group">
+                    <label for="proj-tech">Technologies utilisées</label>
+                    <input type="text" id="proj-tech" placeholder="React, Node.js, MongoDB">
+                </div>
+                <div class="form-group">
+                    <label for="proj-desc">Description</label>
+                    <textarea id="proj-desc" placeholder="Décrivez votre projet..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="proj-link">Lien du projet</label>
+                    <input type="text" id="proj-link" placeholder="https://...">
+                </div>
+                <button class="btn btn-success" onclick="addProject()">+ Ajouter</button>
+            </div>
+            <div class="items-list" id="projets-list"></div>
+        </div>
+
+        <!-- LANGUES -->
+        <div id="langues" class="tab-content">
+            <h2>Gestion des Langues</h2>
+            <div class="form-section">
+                <h3>Ajouter une langue</h3>
+                <div class="form-group">
+                    <label for="lang-name">Langue</label>
+                    <input type="text" id="lang-name" placeholder="ex: Français">
+                </div>
+                <div class="form-group">
+                    <label for="lang-level">Niveau</label>
+                    <select id="lang-level">
+                        <option value="">-- Sélectionner --</option>
+                        <option value="Courant">Courant</option>
+                        <option value="Intermédiaire">Intermédiaire</option>
+                        <option value="Basique">Basique</option>
+                        <option value="Natif">Natif</option>
+                    </select>
+                </div>
+                <button class="btn btn-success" onclick="addLanguage()">+ Ajouter</button>
+            </div>
+            <div class="items-list" id="langues-list"></div>
+        </div>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>

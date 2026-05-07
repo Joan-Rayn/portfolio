@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "title": "Plateforme de recherche immobilière",
+    "technologies": "Next.js, NestJS, PostgreSQL",
+    "description": "Plateforme web pour la recherche et la gestion de propriétés immobilières.",
+    "link": ""
+  },
+  {
+    "id": 2,
+    "title": "Système de reconnaissance des émotions faciales",
+    "technologies": "OpenCV, Py-Feat, Python",
+    "description": "Système d'IA pour la reconnaissance et l'analyse des émotions faciales.",
+    "link": ""
+  }
+]

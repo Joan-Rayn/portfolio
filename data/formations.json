@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "title": "Ingénieur Informatique (Niveau 5)",
+    "school": "École Nationale Supérieure Polytechnique de Douala",
+    "startDate": "2025",
+    "endDate": "2026",
+    "details": ""
+  },
+  {
+    "id": 2,
+    "title": "Baccalauréat D",
+    "school": "Lycée Bilingue du Génie Militaire",
+    "startDate": "2020",
+    "endDate": "2021",
+    "details": ""
+  }
+]

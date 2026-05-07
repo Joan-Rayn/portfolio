@@ -1,0 +1,12 @@
+[
+  {
+    "id": 1,
+    "language": "Français",
+    "level": "Courant"
+  },
+  {
+    "id": 2,
+    "language": "Anglais",
+    "level": "Intermédiaire"
+  }
+]

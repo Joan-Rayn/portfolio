@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "category": "Développement",
+    "skills": "Python (Django, FastAPI), Javascript (Node.js, NestJS, Next.js), PHP"
+  },
+  {
+    "id": 2,
+    "category": "IA",
+    "skills": "OpenCV, MediaPipe, Py-Feat, Ollama, CrewAI, OpenAI Whisper, traitement d'image et reconnaissance d'émotion faciale"
+  },
+  {
+    "id": 3,
+    "category": "Système et Réseau",
+    "skills": "Ubuntu Server, Debian, OpenVPN, Teleport, gestion des accès et sécurité"
+  },
+  {
+    "id": 4,
+    "category": "Bases de Données",
+    "skills": "PostgreSQL, MySQL, MariaDB, SQLite, YugabyteDB"
+  }
+]
